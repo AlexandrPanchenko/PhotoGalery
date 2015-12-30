@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Gallery.Domain.Entity.Album>
+@{
+    ViewBag.Title = "AlbumsDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-md-7">
+            <a href="#">
+                <img class="img-responsive" src="@item.titleImagePath" alt="">
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h3>@item.Name</h3>
+            <h4>@item.DateCreate</h4>
+            <p>@item.Description</p>
+        
+            <a class="btn btn-primary" href="@Url.Action("AlbumInfo",new {id=item.id})">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+    </div>
+        <!-- /.row -->
+        <hr>
+}

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<LoginExample.Models.ApplicationUser> 
+@{
+    ViewBag.Title = "Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="jumbotron">
+    <p>All Users</p>
+    </div>
+@foreach (var item in Model)
+{
+    @Html.ActionLink(@item.UserName, "AlbumsDetail", new { id = item.Id }, new {@class="btn btn-success" } )<br /><br />
+}
+

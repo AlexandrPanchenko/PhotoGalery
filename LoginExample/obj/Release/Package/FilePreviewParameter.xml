@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Microsoft-ApiApp61ce4962fa0f4bc4ba63ab98fb92bb86" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\admin\\Desktop\\LoginExample\\LoginExample\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\admin\\Desktop\\LoginExample\\LoginExample\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-LoginExample-20151115052509.mdf;Initial Catalog=aspnet-LoginExample-20151115052509;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\admin\\Desktop\\LoginExample\\LoginExample\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="MyGallery-Web.config Connection String" description="" value="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MyGallery;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\admin\\Desktop\\LoginExample\\LoginExample\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MyGallery']/@connectionString" />
+  </parameter>
+</parameters>

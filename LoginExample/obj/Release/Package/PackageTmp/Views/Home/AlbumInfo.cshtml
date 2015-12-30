@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Gallery.Domain.Entity.Image>
+
+
+<h2>AlbumInfo</h2>
+<div class="row">
+    @foreach (var item in Model)
+    {
+
+        <div class="col-md-3 portfolio-item">
+            <a href="@Url.Action("FullScreen", new {id=item.id})">
+                <img class="img-responsive" src="@item.ImagePath" alt="">
+            </a>
+        </div>
+    }
+</div>

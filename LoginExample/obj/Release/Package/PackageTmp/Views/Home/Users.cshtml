@@ -1,0 +1,12 @@
+﻿@model IEnumerable<LoginExample.Models.ApplicationUser> 
+@{
+    ViewBag.Title = "Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    @Html.DisplayFor(x => item.Email)<br/>
+    @Html.ActionLink(@item.UserName, "AlbumsDetail", new { id = item.Id })<br />
+}
+

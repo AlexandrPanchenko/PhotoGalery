@@ -1,0 +1,48 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">Home</a>
+            <a class="navbar-brand" href="@Url.Action("Users", "Home")">All Users</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="@Url.Action("About", "Home")">About</a></li>
+                <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+                @*<li><a href="#">Log out</a></li>*@
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</nav>
+<body>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+    <!-- Footer -->
+    <footer class="container-fluid bg-4 text-center">
+        <p>Photo gallery by AlexPanchenko <a href="http://www.vk.com/panchenko_sasha">www.vk.com</a></p>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
